@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: web
-        image: kodekloud/simple-webapp # Empezamos con esta imagen/tag
+        image: nginx # Empezamos con esta imagen/tag
         ports:
         - containerPort: 8080
