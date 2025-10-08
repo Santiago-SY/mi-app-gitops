@@ -1,0 +1,21 @@
+# deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mi-app-gitops
+  namespace: mi-super-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mi-app-gitops
+  template:
+    metadata:
+      labels:
+        app: mi-app-gitops
+    spec:
+      containers:
+      - name: web
+        image: kodekloud/simple-webapp # Empezamos con esta imagen/tag
+        ports:
+        - containerPort: 8080
